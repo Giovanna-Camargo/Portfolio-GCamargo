@@ -8,9 +8,6 @@ export default function Hero() {
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="eyebrow text-xs text-magenta mb-4">
-            disponível para novas oportunidades
-          </p>
           <h1 className="font-display font-bold text-5xl sm:text-6xl leading-[1.05] tracking-tight">
             Giovanna{" "}
             <span className="bg-brand-cta bg-clip-text text-transparent">
