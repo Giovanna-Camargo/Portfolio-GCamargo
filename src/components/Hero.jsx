@@ -45,7 +45,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-magenta opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-magenta" />
             </span>
-            <span className="text-sm font-medium text-white">Disponível</span>
+            <span className="text-sm font-medium text-white">Disponível para contratação</span>
           </div>
         </div>
       </div>
