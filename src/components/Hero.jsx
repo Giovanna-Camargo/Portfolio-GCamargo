@@ -20,11 +20,6 @@ export default function Hero() {
           <p className="mt-5 text-lg text-muted max-w-md">
             Full Stack · Design UI/UX
           </p>
-          <p className="mt-4 text-white/70 max-w-md leading-relaxed">
-            Em formação pela FATEC Taubaté, com base técnica sólida desde a
-            ETEC. Uno lógica de programação e olhar estético para criar
-            interfaces modernas, intuitivas e responsivas.
-          </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
