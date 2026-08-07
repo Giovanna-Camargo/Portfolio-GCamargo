@@ -5,13 +5,11 @@ const projetos = [
   {
     tag: "DEV",
     titulo: "Aplicações Web & Mobile",
-    desc: "Painéis, dashboards e apps voltados a experiências web e mobile completas.",
     img: devImg,
   },
   {
     tag: "DESIGN",
     titulo: "Design UI/UX & Design Gráfico",
-    desc: "Convites, identidade visual e artes interativas com foco em experiência.",
     img: designImg,
   },
 ];
@@ -45,7 +43,6 @@ export default function Portfolio() {
                 <h3 className="font-display font-semibold text-xl text-white mt-2">
                   {p.titulo}
                 </h3>
-                <p className="text-white/60 text-sm mt-2">{p.desc}</p>
               </div>
             </article>
           ))}
