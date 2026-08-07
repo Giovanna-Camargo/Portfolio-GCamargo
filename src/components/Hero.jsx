@@ -25,6 +25,12 @@ export default function Hero() {
             >
               Download CV
             </a>
+            <a
+              href="#contato"
+              className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:border-white/50 transition-colors"
+            >
+              Contato
+            </a>
           </div>
         </div>
 
