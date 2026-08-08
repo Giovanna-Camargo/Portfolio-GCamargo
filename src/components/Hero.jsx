@@ -1,6 +1,10 @@
 import heroImg from "../assets/hero.jpg";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+  const c = t.hero;
+
   return (
     <section
       id="topo"
@@ -15,7 +19,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-5 text-lg text-muted max-w-md">
-            Full Stack · Design UI/UX
+            {h.subtitle}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">

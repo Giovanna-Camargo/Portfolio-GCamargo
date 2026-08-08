@@ -5,11 +5,11 @@ import { languages } from "../i18n/translations";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const links = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#habilidades", label: "Habilidades" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#certificados", label: "Certificados" },
-];
+    { href: "#sobre", label: t.nav.sobre },
+    { href: "#habilidades", label: t.nav.habilidades },
+    { href: "#projetos", label: t.nav.projetos },
+    { href: "#certificados", label: t.nav.certificados },
+  ];
 
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage();
@@ -51,7 +51,7 @@ export default function Navbar() {
             href="https://github.com/gih-camarg0"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub"
+            aria-label={t.nav.github}
             className="text-white/80 hover:text-white transition-colors"
           >
             <FiGithub size={18} />
@@ -60,16 +60,10 @@ export default function Navbar() {
             href="https://www.linkedin.com/in/giovanna-camargo-5092363a4/"
             target="_blank"
             rel="noreferrer"
-            aria-label="LinkedIn"
+            aria-label={t.nav.linkedin}
             className="text-white/80 hover:text-white transition-colors"
           >
             <FiLinkedin size={18} />
-          </a>
-          <a
-            href="#contato"
-            className="rounded-full bg-brand-cta px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity"
-          >
-            Contato
           </a>
           <LanguageSwitcher />
         </div>
@@ -77,7 +71,7 @@ export default function Navbar() {
         <button
           className="md:hidden text-white"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Abrir menu"
+          aria-label="Menu"
           aria-expanded={open}
         >
           <span className="block w-6 h-0.5 bg-white mb-1.5" />
@@ -98,10 +92,48 @@ export default function Navbar() {
             ))}
             <li>
               <a href="#contato" onClick={() => setOpen(false)}>
-                Contato
+                {t.nav.contato}
               </a>
             </li>
           </ul>
+
+          <div className="flex items-center justify-between border-t border-white/10 pt-4">
+            <div className="flex items-center gap-4">
+              <a
+                href="https://github.com/gih-camarg0"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t.nav.github}
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <FiGithub size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/giovanna-camargo-5092363a4/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t.nav.linkedin}
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <FiLinkedin size={18} />
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              {languages.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => setLang(l.code)}
+                  className={`rounded-full px-3 py-1.5 text-xs font-medium border transition-colors ${
+                    lang === l.code
+                      ? "bg-brand-cta text-white border-transparent"
+                      : "border-white/20 text-white/70"
+                  }`}
+                >
+                  {l.short}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </header>
