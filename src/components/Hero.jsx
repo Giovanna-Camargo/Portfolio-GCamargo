@@ -27,13 +27,13 @@ export default function Hero() {
               href="/curriculo-giovanna-camargo.pdf"
               className="rounded-full bg-brand-cta px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             >
-              Download CV
+              {c.downloadCv}
             </a>
             <a
               href="#contato"
               className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:border-white/50 transition-colors"
             >
-              Contato
+              {c.contato}
             </a>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-magenta opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-magenta" />
             </span>
-            <span className="text-sm font-medium text-white">Disponível para contratação</span>
+            <span className="text-sm font-medium text-white">{c.badge}</span>
           </div>
         </div>
       </div>

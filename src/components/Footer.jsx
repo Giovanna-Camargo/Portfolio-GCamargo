@@ -1,19 +1,22 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  const c = t.footer;
+
   return (
     <footer
       id="contato"
       className="relative overflow-hidden border-t border-line px-6 py-20 bg-brand-glow"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <p className="eyebrow text-xs text-magenta mb-4">contato</p>
+        <p className="eyebrow text-xs text-magenta mb-4">{c.eyebrow}</p>
         <h2 className="font-display font-semibold text-3xl sm:text-4xl mb-4">
-          Vamos construir algo juntos?
+          {c.heading}
         </h2>
         <p className="text-white/60 max-w-md mx-auto mb-10">
-          Estou disponível para novas oportunidades como desenvolvedora
-          Full-Stack e designer UI/UX.
+          {c.paragraph}
         </p>
 
         <div className="flex items-center justify-center gap-4 mb-14">
@@ -23,7 +26,7 @@ export default function Footer() {
             rel="noreferrer"
             className="rounded-full bg-brand-cta px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity flex items-center gap-2"
           >
-            <FiMail size={16} /> Enviar e-mail
+            <FiMail size={16} />{c.sendEmail}
           </a>
           <a
             href="https://github.com/gih-camarg0"
@@ -46,7 +49,7 @@ export default function Footer() {
         </div>
 
         <p className="text-white/40 text-xs">
-          Feito por Giovanna Camargo · Pindamonhangaba, SP · {new Date().getFullYear()}
+          {c.madeBy} {new Date().getFullYear()}
         </p>
       </div>
     </footer>

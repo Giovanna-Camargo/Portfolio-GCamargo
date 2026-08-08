@@ -17,13 +17,10 @@ export const translations = {
       linkedin: "LinkedIn",
     },
     hero: {
-      eyebrow: "disponível para novas oportunidades",
       subtitle: "Full Stack · Design UI/UX",
-      paragraph:
-        "Em formação pela FATEC Taubaté, com base técnica sólida desde a ETEC. Uno lógica de programação e olhar estético para criar interfaces modernas, intuitivas e responsivas.",
       downloadCv: "Download CV",
       contato: "Contato",
-      badge: "Disponível",
+      badge: "Disponível para contratação",
     },
     sobre: {
       eyebrow: "sobre mim",
@@ -123,13 +120,10 @@ export const translations = {
       linkedin: "LinkedIn",
     },
     hero: {
-      eyebrow: "available for new opportunities",
       subtitle: "Full Stack · UI/UX Design",
-      paragraph:
-        "Studying Systems Analysis and Development at FATEC Taubaté, with a solid technical foundation from ETEC. I combine programming logic with an eye for design to build modern, intuitive, and responsive interfaces.",
       downloadCv: "Download CV",
       contato: "Contact",
-      badge: "Available",
+      badge: "Available for hire",
     },
     sobre: {
       eyebrow: "about me",
@@ -229,13 +223,10 @@ export const translations = {
       linkedin: "LinkedIn",
     },
     hero: {
-      eyebrow: "disponible para nuevas oportunidades",
       subtitle: "Full Stack · Diseño UI/UX",
-      paragraph:
-        "Estudiando Análisis y Desarrollo de Sistemas en FATEC Taubaté, con una base técnica sólida desde ETEC. Combino la lógica de programación con una mirada estética para crear interfaces modernas, intuitivas y responsivas.",
       downloadCv: "Descargar CV",
       contato: "Contacto",
-      badge: "Disponible",
+      badge: "Disponible para contratación",
     },
     sobre: {
       eyebrow: "sobre mí",

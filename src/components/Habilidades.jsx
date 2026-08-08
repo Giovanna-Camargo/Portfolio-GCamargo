@@ -1,3 +1,5 @@
+import { useLanguage } from "../context/LanguageContext";
+
 const hard = [
   "HTML5 / CSS3",
   "JavaScript",
@@ -27,22 +29,25 @@ function Pill({ children }) {
 }
 
 export default function Habilidades() {
+  const { t } = useLanguage();
+  const c = t.habilidades;
+
   return (
     <section id="habilidades" className="px-6 py-24 border-t border-line">
       <div className="max-w-6xl mx-auto">
         <p className="eyebrow text-xs text-magenta mb-4">
-          habilidades &amp; competências
+          {c.subtitle}
         </p>
         <h2 className="font-display font-semibold text-3xl sm:text-4xl mb-12">
-          O que carrego para o time
+          {c.heading}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="font-display font-semibold text-lg mb-4 text-white">
-              Hard Skills{" "}
+              {c.hardTitle}{" "}
               <span className="text-muted font-body font-normal text-sm">
-                (Técnicas)
+                {c.hardSuffix}
               </span>
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -54,9 +59,9 @@ export default function Habilidades() {
 
           <div>
             <h3 className="font-display font-semibold text-lg mb-4 text-white">
-              Soft Skills{" "}
+              {c.softTitle}{" "}
               <span className="text-muted font-body font-normal text-sm">
-                (Comportamentais)
+                {c.softSuffix}
               </span>
             </h3>
             <div className="flex flex-wrap gap-3">
