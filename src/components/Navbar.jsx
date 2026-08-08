@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { useLanguage } from "../context/LanguageContext";
+import { languages } from "../i18n/translations";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -9,6 +12,7 @@ const links = [
 ];
 
 export default function Navbar() {
+  const { t, lang, setLang } = useLanguage();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -67,6 +71,7 @@ export default function Navbar() {
           >
             Contato
           </a>
+          <LanguageSwitcher />
         </div>
 
         <button
