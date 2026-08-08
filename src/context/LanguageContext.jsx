@@ -42,7 +42,7 @@ export function LanguageProvider({ children }) {
   };
 
   return (
-    <LanguageContext.Provider value={value}>
+    < LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );
