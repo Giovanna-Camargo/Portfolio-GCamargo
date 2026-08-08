@@ -19,7 +19,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-5 text-lg text-muted max-w-md">
-            {h.subtitle}
+            {c.subtitle}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
