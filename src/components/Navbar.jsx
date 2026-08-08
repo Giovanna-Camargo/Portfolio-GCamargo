@@ -4,17 +4,17 @@ import { useLanguage } from "../context/LanguageContext";
 import { languages } from "../i18n/translations";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const links = [
-    { href: "#sobre", label: t.nav.sobre },
-    { href: "#habilidades", label: t.nav.habilidades },
-    { href: "#projetos", label: t.nav.projetos },
-    { href: "#certificados", label: t.nav.certificados },
-  ];
-
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const links = [
+      { href: "#sobre", label: t.nav.sobre },
+      { href: "#habilidades", label: t.nav.habilidades },
+      { href: "#projetos", label: t.nav.projetos },
+      { href: "#certificados", label: t.nav.certificados },
+    ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
