@@ -35,7 +35,7 @@ export default function Certificados() {
               key={catId}
               onClick={() => setAtivo(catId)}
               className={`rounded-full px-4 py-2 text-sm border transition-colors ${
-                ativo === cat
+                ativo === catId
                   ? "bg-brand-cta text-white border-transparent"
                   : "border-white/15 text-white/70 hover:border-white/40"
               }`}
