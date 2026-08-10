@@ -1,8 +1,5 @@
 import { useLanguage } from "../context/LanguageContext";
 
-const { t } = useLanguage();
-const c = t.sobre;
-
 const formacao = [
   {
     periodo: "2026 – 2027",
@@ -17,6 +14,9 @@ const formacao = [
 ];
 
 export default function Sobre() {
+  const { t } = useLanguage();
+  const c = t.sobre;
+
   return (
     <section id="sobre" className="px-6 py-24 border-t border-line">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">

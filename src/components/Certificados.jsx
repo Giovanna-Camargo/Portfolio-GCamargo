@@ -12,9 +12,9 @@ export default function Certificados() {
 
   const filtrados = useMemo(
     () =>
-      ativo === "Todos"
+      ativo === "all"
         ? certificados
-        : certificados.filter((c) => c.categoriaId === ativo),
+        : certificados.filter((cert) => c.categoriaId === ativo),
     [ativo]
   );
 
