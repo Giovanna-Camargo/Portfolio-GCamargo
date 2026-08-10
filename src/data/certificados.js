@@ -8,6 +8,20 @@ export const categorias = [
 
 export const certificados = [
   {
+    titulo: "Desenvolvendo em Node.js",
+    instituicao: "Venturus",
+    ano: "2026",
+    categoriaId: "tech",
+    link: "https://portflio-desenvolvedor.vercel.app/assets/certificados/ITEssentials.pdf",
+  },
+  {
+    titulo: "Desenvolvendo em React.js",
+    instituicao: "Venturus",
+    ano: "2026",
+    categoriaId: "tech",
+    link: "https://portflio-desenvolvedor.vercel.app/assets/certificados/ITEssentials.pdf",
+  },
+  {
     titulo: "IT Essentials 7",
     instituicao: "Cisco Networking Academy",
     ano: "2026",
