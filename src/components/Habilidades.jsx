@@ -1,25 +1,5 @@
 import { useLanguage } from "../context/LanguageContext";
 
-const hard = [
-  "HTML5 / CSS3",
-  "JavaScript",
-  "Git & GitHub",
-  "Lógica de Programação",
-  "SQL / Banco de Dados",
-  "Excel & Office 365",
-  "SharePoint",
-  "UI Design (Canva/Figma)",
-];
-
-const soft = [
-  "Proatividade",
-  "Organização",
-  "Adaptabilidade",
-  "Comunicação Assertiva",
-  "Trabalho em Equipe",
-  "Raciocínio Lógico",
-];
-
 function Pill({ children }) {
   return (
     <span className="rounded-full border border-white/12 bg-surface2 px-4 py-2 text-sm text-white/85 hover:border-magenta/60 hover:text-white transition-colors">
@@ -51,7 +31,7 @@ export default function Habilidades() {
               </span>
             </h3>
             <div className="flex flex-wrap gap-3">
-              {hard.map((s) => (
+              {c.hard.map((s) => (
                 <Pill key={s}>{s}</Pill>
               ))}
             </div>
@@ -65,7 +45,7 @@ export default function Habilidades() {
               </span>
             </h3>
             <div className="flex flex-wrap gap-3">
-              {soft.map((s) => (
+              {c.soft.map((s) => (
                 <Pill key={s}>{s}</Pill>
               ))}
             </div>
