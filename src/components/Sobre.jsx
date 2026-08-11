@@ -1,18 +1,5 @@
 import { useLanguage } from "../context/LanguageContext";
 
-const formacao = [
-  {
-    periodo: "2026 – 2027",
-    curso: "Análise e Desenvolvimento de Sistemas",
-    instituicao: "Fatec Taubaté",
-  },
-  {
-    periodo: "2023 – 2025",
-    curso: "Técnico em Desenvolvimento de Sistemas",
-    instituicao: "Etec João Gomes de Araújo",
-  },
-];
-
 export default function Sobre() {
   const { t } = useLanguage();
   const c = t.sobre;
@@ -38,7 +25,7 @@ export default function Sobre() {
             {c.formacaoEyebrow}
           </p>
           <ol className="relative border-l border-white/15 pl-6 space-y-10">
-            {formacao.map((f) => (
+            {c.formacao.map((f) => (
               <li key={f.curso} className="relative">
                 <span className="absolute -left-[1.65rem] top-1 h-3 w-3 rounded-full bg-brand-cta" />
                 <p className="font-mono text-xs text-muted mb-1">
