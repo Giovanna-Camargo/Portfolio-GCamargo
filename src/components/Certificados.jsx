@@ -14,7 +14,7 @@ export default function Certificados() {
     () =>
       ativo === "all"
         ? certificados
-        : certificados.filter((cert) => c.categoriaId === ativo),
+        : certificados.filter((cert) => cert.categoriaId === ativo),
     [ativo]
   );
 
