@@ -1,4 +1,5 @@
-import { FiArrowLeft, FiCode, FiLayers, FiExternalLink, RiGlobalLine } from "react-icons/fi";
+import { FiArrowLeft, FiCode, FiLayers, FiExternalLink } from "react-icons/fi";
+import { RiGlobalLine } from "react-icons/ri";
 import { useLanguage } from "../context/LanguageContext";
 import { projetosImagens } from "../data/projetosImagens";
 
