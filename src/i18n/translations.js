@@ -132,7 +132,7 @@ export const translations = {
           desc: "E-commerce multimarcas de moda, calçados e acessórios com entrega nacional. A plataforma cobre toda a jornada de compra: catálogo com filtros por preço, tipo, cor e marca; página de produtos com seletor de cor/tamanho e guia de medids; favoritos; carrinho de cálculode desconto e total; e checkout integrdo à API de pagamento do Nubank. Inclui ainda páginas de suporte, entregas, trocas, devoluções e a história da marca.",
           data: "Agosto de 2026",
           repoLink: "",
-          demoLink: "",
+          demoLink: "https://loja-mare-mansa.vercel.app/",
           tecnologias: ["React", "Supabase", "PostGIS", "Vercel", "Figma", "GitHub"],
           caracteristicas: [
             "Recurso completo de e-commerce", 
