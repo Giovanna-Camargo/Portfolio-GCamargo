@@ -114,12 +114,12 @@ export const translations = {
       items: [
         {
           slug: "projeto-dev-1",
-          titulo: "Exemplo de Projeto Dev 1",
-          desc: "Breve descrição do projeto, o que ele faz e quais tecnologias foram usadas.",
-          data: "Março de 2026",
-          repoLink: "",
+          titulo: "PREVER - Sistema de Monitoramento de Desastres",
+          desc: "Plataforma bidirecional que centraliza dados do INMET e CEMADEN com relatos da comunidade via crowdsourcing, reduzindo falhas no envio de alertas e otimizando a resposta de órgãos de segurança e saúde..",
+          data: "Fevereiro de 2026",
+          repoLink: "https://visualizersmdn.vercel.app/",
           demoLink: "",
-          tecnologias: ["React", "Tailwind CSS", "Vite"],
+          tecnologias: ["Flutter", "Dart", "React", "Supabase", "PostGIS", "Vercel", "Figma", "GitHub"],
           caracteristicas: [
             "Totalmente responsivo",
             "Suporte a múltiplos idiomas",
@@ -128,13 +128,23 @@ export const translations = {
         },
         {
           slug: "projeto-dev-2",
-          titulo: "Exemplo de Projeto Dev 2",
+          titulo: "Ecommerce Maré Mansa",
           desc: "Breve descrição do projeto, o que ele faz e quais tecnologias foram usadas.",
-          data: "Janeiro de 2026",
+          data: "Agosto de 2026",
           repoLink: "",
           demoLink: "",
-          tecnologias: ["JavaScript", "Node.js"],
-          caracteristicas: ["Recurso completo", "Integração com API"],
+          tecnologias: ["React", "Supabase", "PostGIS", "Vercel", "Figma", "GitHub"],
+          caracteristicas: ["Recurso completo", "Integração com API de pagamento"],
+        },
+        {
+          slug: "projeto-dev-2",
+          titulo: "Dashboard Maré Mansa",
+          desc: "Breve descrição do projeto, o que ele faz e quais tecnologias foram usadas.",
+          data: "Agosto de 2026",
+          repoLink: "",
+          demoLink: "",
+          tecnologias: ["React", "Supabase", "PostGIS", "Vercel", "Figma", "GitHub"],
+          caracteristicas: ["Recurso completo", "Integração com API de pagamento"],
         },
       ],
     },
@@ -145,13 +155,14 @@ export const translations = {
       back: "Voltar",
       items: [
         {
-          titulo: "Exemplo de Projeto Design 1",
+          titulo: "PREVER - Sistema de Monitoramento de Desastres",
           desc: "Breve descrição do projeto.",
         },
         {
-          titulo: "Exemplo de Projeto Design 2",
+          titulo: "Ecommerce Maré Mansa",
           desc: "Breve descrição do projeto.",
         },
+        
       ],
     },
     projetoDetalhe: {

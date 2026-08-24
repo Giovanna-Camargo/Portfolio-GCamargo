@@ -1,4 +1,4 @@
-import { FiArrowLeft, FiCode, FiLayers, FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiArrowLeft, FiCode, FiLayers, FiExternalLink, RiGlobalLine } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
 import { projetosImagens } from "../data/projetosImagens";
 
@@ -90,11 +90,11 @@ export default function ProjetoDetalhe({ categoria, slug }) {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2.5 text-sm text-white hover:border-magenta hover:text-magenta transition-colors"
                 >
-                  <FiGithub size={15} /> {t.projetoDetalhe.repo}
+                  <RiGlobalLine size={15} /> {t.projetoDetalhe.repo}
                 </a>
               ) : (
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2.5 text-sm text-white/30 cursor-not-allowed">
-                  <FiGithub size={15} /> {t.projetoDetalhe.noLink}
+                  <RiGlobalLine size={15} /> {t.projetoDetalhe.noLink}
                 </span>
               )}
 
