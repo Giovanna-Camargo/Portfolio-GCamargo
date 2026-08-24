@@ -115,7 +115,7 @@ export const translations = {
         {
           slug: "projeto-dev-1",
           titulo: "PREVER - Sistema de Monitoramento de Desastres",
-          desc: "Plataforma bidirecional que centraliza dados do INMET e CEMADEN com relatos da comunidade via crowdsourcing, reduzindo falhas no envio de alertas e otimizando a resposta de órgãos de segurança e saúde..",
+          desc: "Plataforma bidirecional que centraliza dados do INMET e CEMADEN com relatos da comunidade via crowdsourcing, reduzindo falhas no envio de alertas e otimizando a resposta de órgãos de segurança e saúde.",
           data: "Fevereiro de 2026",
           repoLink: "https://visualizersmdn.vercel.app/",
           demoLink: "",
@@ -179,7 +179,7 @@ export const translations = {
       caracCount: "Principais características",
       tecTitle: "Tecnologias utilizadas",
       caracTitle: "Principais características",
-      repo: "Repositório",
+      repo: "Landing Page",
       demo: "Demonstração",
       noLink: "Sem link",
       notFound: "Projeto não encontrado.",
