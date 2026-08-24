@@ -129,12 +129,16 @@ export const translations = {
         {
           slug: "projeto-dev-2",
           titulo: "Ecommerce Maré Mansa",
-          desc: "Breve descrição do projeto, o que ele faz e quais tecnologias foram usadas.",
+          desc: "E-commerce multimarcas de moda, calçados e acessórios com entrega nacional. A plataforma cobre toda a jornada de compra: catálogo com filtros por preço, tipo, cor e marca; página de produtos com seletor de cor/tamanho e guia de medids; favoritos; carrinho de cálculode desconto e total; e checkout integrdo à API de pagamento do Nubank. Inclui ainda páginas de suporte, entregas, trocas, devoluções e a história da marca.",
           data: "Agosto de 2026",
           repoLink: "",
           demoLink: "",
           tecnologias: ["React", "Supabase", "PostGIS", "Vercel", "Figma", "GitHub"],
-          caracteristicas: ["Recurso completo", "Integração com API de pagamento"],
+          caracteristicas: [
+            "Recurso completo de e-commerce", 
+            "Integração pagamento via API do Nubank",
+            "Seletor de cor e tamanho com acompanhamento de imagem",
+          ],
         },
         {
           slug: "projeto-dev-2",
