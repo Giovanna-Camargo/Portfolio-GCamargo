@@ -10,10 +10,10 @@ export default function ProjetosDev() {
     <section className="px-6 pt-40 pb-24">
       <div className="max-w-6xl mx-auto">
         <a
-          href="#/"
-          className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-8"
+          href={`#/projetos/dev/${item.slug}`}
+          className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2.5 text-sm font-semibold text-white hover:border-magenta hover:text-magenta transition-colors"
         >
-          <FiArrowLeft size={16} /> {p.back}
+          {p.viewMore} <FiArrowRight size={14} />
         </a>
 
         <p className="eyebrow text-xs text-magenta mb-4">{p.eyebrow}</p>

@@ -8,20 +8,26 @@ import Certificados from "./components/Certificados";
 import Footer from "./components/Footer";
 import ProjetosDev from "./pages/ProjetosDev";
 import ProjetosDesign from "./pages/ProjetosDesign";
+import ProjetoDetalhe from "./pages/ProjetoDetalhe";
 
-function getPageFromHash() {
+function parseRoute() {
   const hash = window.location.hash;
-  if (hash.startsWith("#/projetos/dev")) return "dev";
-  if (hash.startsWith("#/projetos/design")) return "design";
-  return "home";
+  const devDetail = hash.match(/^#\/projetos\/dev\/(.+)$/);
+  const designDetail = hash.match(/^#\/projetos\/design\/(.+)$/);
+
+  if (devDetail) return { page: "detalhe", categoria: "dev", slug: devDetail[1] };
+  if (designDetail) return { page: "detalhe", categoria: "design", slug: designDetail[1] };
+  if (hash.startsWith("#/projetos/dev")) return { page: "dev" };
+  if (hash.startsWith("#/projetos/design")) return { page: "design" };
+  return { page: "home" };
 }
 
 export default function App() {
-  const [page, setPage] = useState(getPageFromHash);
+  const [route, setRoute] = useState(parseRoute);
 
   useEffect(() => {
     function onHashChange() {
-      setPage(getPageFromHash());
+      setRoute(parseRoute());
       window.scrollTo(0, 0);
     }
     window.addEventListener("hashchange", onHashChange);
@@ -32,9 +38,12 @@ export default function App() {
     <div className="bg-ink min-h-screen font-body">
       <Navbar />
       <main>
-        {page === "dev" && <ProjetosDev />}
-        {page === "design" && <ProjetosDesign />}
-        {page === "home" && (
+        {route.page === "dev" && <ProjetosDev />}
+        {route.page === "design" && <ProjetosDesign />}
+        {route.page === "detalhe" && (
+          <ProjetoDetalhe categoria={route.categoria} slug={route.slug} />
+        )}
+        {route.page === "home" && (
           <>
         <Hero />
         <Sobre />
