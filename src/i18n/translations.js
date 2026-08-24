@@ -141,14 +141,18 @@ export const translations = {
           ],
         },
         {
-          slug: "projeto-dev-2",
+          slug: "projeto-dev-3",
           titulo: "Dashboard Maré Mansa",
-          desc: "Breve descrição do projeto, o que ele faz e quais tecnologias foram usadas.",
+          desc: "Dashboard administrativo desenvolvido para uma loja que vende simultaneamente pelo site, WhatsApp, Instagram e na Loja Física. Centraliza estoque, pedidos, vendas e relatórios financeiros em um só lugar, com controle de acesso por perfil e integração direta com o catálogo do e-commerce.",
           data: "Agosto de 2026",
           repoLink: "",
           demoLink: "",
           tecnologias: ["React", "Supabase", "PostGIS", "Vercel", "Figma", "GitHub"],
-          caracteristicas: ["Recurso completo", "Integração com API de pagamento"],
+          caracteristicas: [
+            "Controle de acesso hierárquico", 
+            "Variantes de produtos com fotos por cor",
+            "Relatórios com filtro de período e exportação"
+          ],
         },
       ],
     },
