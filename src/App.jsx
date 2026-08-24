@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import ProjetosDev from "./pages/ProjetosDev";
 import ProjetosDesign from "./pages/ProjetosDesign";
 import ProjetoDetalhe from "./pages/ProjetoDetalhe";
+import ProjetoDetalheDesign from "./pages/ProjetoDetalheDesign";
 
 function parseRoute() {
   const hash = window.location.hash;
@@ -40,8 +41,11 @@ export default function App() {
       <main>
         {route.page === "dev" && <ProjetosDev />}
         {route.page === "design" && <ProjetosDesign />}
-        {route.page === "detalhe" && (
-          <ProjetoDetalhe categoria={route.categoria} slug={route.slug} />
+        {route.page === "detalhe-dev" && (
+          <ProjetoDetalhe categoria="dev" slug={route.slug} />
+        )}
+        {route.page === "detalhe-design" && (
+          <ProjetoDetalheDesign slug={route.slug} />
         )}
         {route.page === "home" && (
           <>
