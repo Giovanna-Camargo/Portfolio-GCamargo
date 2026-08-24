@@ -70,8 +70,7 @@ export const translations = {
       ],
     },
     portfolio: {
-      eyebrow: "portfólio",
-      heading: "Projetos em destaque",
+      heading: "Portfolio",
       items: [
         {
           tag: "DEV",
@@ -105,6 +104,38 @@ export const translations = {
         "Estou disponível para novas oportunidades como desenvolvedora Full-Stack e designer UI/UX.",
       sendEmail: "Enviar e-mail",
       madeBy: "Feito por Giovanna Camargo · Pindamonhangaba, SP",
+    },
+    projetosDevPage: {
+      eyebrow: "desenvolvimento",
+      heading: "Aplicações Web & Mobile",
+      subtitle: "Projetos focados em código: painéis, dashboards e apps completos.",
+      back: "Voltar",
+      items: [
+        {
+          titulo: "Exemplo de Projeto Dev 1",
+          desc: "Breve descrição do projeto.",
+        },
+        {
+          titulo: "Exemplo de Projeto Dev 2",
+          desc: "Breve descrição do projeto.",
+        },
+      ],
+    },
+    projetosDesignPage: {
+      eyebrow: "design",
+      heading: "Design UI/UX & Design Gráfico",
+      subtitle: "Convites, identidade visual e artes interativas com foco em experiência.",
+      back: "Voltar",
+      items: [
+        {
+          titulo: "Exemplo de Projeto Design 1",
+          desc: "Breve descrição do projeto.",
+        },
+        {
+          titulo: "Exemplo de Projeto Design 2",
+          desc: "Breve descrição do projeto.",
+        },
+      ],
     },
   },
 
@@ -173,8 +204,7 @@ export const translations = {
       ],
     },
     portfolio: {
-      eyebrow: "portfolio",
-      heading: "Featured projects",
+      heading: "Portfolio",
       items: [
         {
           tag: "DEV",
@@ -276,8 +306,7 @@ export const translations = {
       ],
     },
     portfolio: {
-      eyebrow: "portafolio",
-      heading: "Proyectos destacados",
+      heading: "Portafolio",
       items: [
         {
           tag: "DEV",
