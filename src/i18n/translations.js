@@ -124,7 +124,7 @@ export const translations = {
       viewMore: "Ver mais",
       items: [
         {
-          slug: "projeto-dev-1",
+          slug: "PREVER",
           titulo: "PREVER - Sistema de Monitoramento de Desastres",
           desc: "Plataforma bidirecional que centraliza dados do INMET e CEMADEN com relatos da comunidade via crowdsourcing, reduzindo falhas no envio de alertas e otimizando a resposta de órgãos de segurança e saúde.",
           data: "Fevereiro de 2026",
@@ -138,7 +138,7 @@ export const translations = {
           ],
         },
         {
-          slug: "projeto-dev-2",
+          slug: "ecommerce-mare",
           titulo: "Ecommerce Maré Mansa",
           desc: "E-commerce multimarcas de moda, calçados e acessórios com entrega nacional. A plataforma cobre toda a jornada de compra: catálogo com filtros por preço, tipo, cor e marca; página de produtos com seletor de cor/tamanho e guia de medids; favoritos; carrinho de cálculode desconto e total; e checkout integrdo à API de pagamento do Nubank. Inclui ainda páginas de suporte, entregas, trocas, devoluções e a história da marca.",
           data: "Agosto de 2026",
@@ -152,7 +152,7 @@ export const translations = {
           ],
         },
         {
-          slug: "projeto-dev-3",
+          slug: "dashboard-mare",
           titulo: "Dashboard Maré Mansa",
           desc: "Dashboard administrativo desenvolvido para uma loja que vende simultaneamente pelo site, WhatsApp, Instagram e na Loja Física. Centraliza estoque, pedidos, vendas e relatórios financeiros em um só lugar, com controle de acesso por perfil e integração direta com o catálogo do e-commerce.",
           data: "Agosto de 2026",
@@ -203,7 +203,7 @@ export const translations = {
           downloadLink: "",
         },
         {
-          slug: "festa-cultural",
+          slug: "arraia-avenida",
           titulo: "Convite Digital — Festa Cultural",
           desc: "Composição vibrante e temática para evento comunitário junino.",
           data: "Julho de 2024",
@@ -216,7 +216,7 @@ export const translations = {
           downloadLink: "",
         },
         {
-          slug: "primeiro-ano",
+          slug: "kalel-1-ano",
           titulo: "Convite Digital — Aninversário de 1 ano",
           desc: "Projeto de convite personalizado. Foco em composição lúdica, tipografia infantil e harmonização de cores pastéis.",
           data: "Junho de 2026",
@@ -281,8 +281,8 @@ export const translations = {
           downloadLink: "",
         },
         {
-          slug: "ui-ux-eMM",
-          titulo: "UI/UX — E-commerce: Maré Mansa",
+          slug: "ui-ux-mare",
+          titulo: "UI/UX — Maré Mansa",
           desc: "Protótipo de interface para e-commerce e dashboard web de controle para a loja Maré Mansa.",
           data: "Agosto de 2026",
           tipo: "UI/UX Design",
@@ -416,7 +416,7 @@ export const translations = {
       viewMore: "View more",
       items: [
         {
-          slug: "projeto-dev-1",
+          slug: "PREVER",
           titulo: "PREVER - Disaster Monitoring System",
           desc: "Bidirectional platform that centralizes INMET and CEMADEN data with community reports via crowdsourcing, reducing alert delivery failures and optimizing the response of security and health agencies.",
           data: "February 2026",
@@ -430,7 +430,7 @@ export const translations = {
           ],
         },
         {
-          slug: "projeto-dev-2",
+          slug: "ecommerce-mare",
           titulo: "Maré Mansa E-commerce",
           desc: "Multi-brand e-commerce for fashion, footwear, and accessories with nationwide delivery. The platform covers the entire purchase journey: catalog with filters by price, type, color, and brand; product pages with color/size selectors and a sizing guide; wishlist; a cart that calculates discounts and totals; and checkout integrated with Nubank's payment API. It also includes support, delivery, exchange, return pages, and the brand's story.",
           data: "August 2026",
@@ -444,7 +444,7 @@ export const translations = {
           ],
         },
         {
-          slug: "projeto-dev-3",
+          slug: "dashboard-mare",
           titulo: "Maré Mansa Dashboard",
           desc: "Administrative dashboard built for a store that sells simultaneously through its website, WhatsApp, Instagram, and a physical store. It centralizes inventory, orders, sales, and financial reports in one place, with role-based access control and direct integration with the e-commerce catalog.",
           data: "August 2026",
@@ -468,32 +468,32 @@ export const translations = {
       items: [
         {
           slug: "primeira-eucaristia",
-          titulo: "Invitation — First Communion",
-          desc: "Elegant, minimalist invitation for a religious celebration, featuring golden icons of a chalice, bread, and dove over a white background with confetti details.",
-          data: "April 2026",
+          titulo: "Digital Invitation — First Holy Communion",
+          desc: "Clean and elegant invitation for a religious celebration, featuring refined typography and golden elements.",
+          data: "April 2024",
           tipo: "Digital Invitation",
-          cliente: "Private client",
-          formato: "Digital invitation (WhatsApp/Instagram)",
-          ferramentas: ["Canva"],
+          cliente: "Private Client",
+          formato: "Instagram Stories (1080x1920)",
+          ferramentas: ["Canva", "Photoshop"],
           paleta: ["#FFFFFF", "#ffdf5f", "#B38E36", "#4A4349"],
           demoLink: "",
           downloadLink: "",
         },
         {
-          slug: "festa-cultural",
-          titulo: "Invitation — Arraiá da Avenida",
-          desc: "Digital invitation with a Brazilian June Festival theme, blending bunting flags, bonfire, and hot air balloon in a cozy, colorful layout for a street party.",
-          data: "July 2026",
+          slug: "arraia-avenida",
+          titulo: "Digital Invitation — Cultural Festival",
+          desc: "Vibrant and thematic composition for a community June festival.",
+          data: "July 2024",
           tipo: "Digital Invitation",
-          cliente: "Private client",
-          formato: "Digital invitation (WhatsApp/Instagram)",
-          ferramentas: ["Canva"],
+          cliente: "Private Client",
+          formato: "Instagram Stories (1080x1920)",
+          ferramentas: ["Canva", "Photoshop"],
           paleta: ["#4A2E1C", "#8C5A32", "#C83E28", "#EBA023", "#00829B", "#FAF6DF"],
           demoLink: "",
           downloadLink: "",
         },
         {
-          slug: "primeiro-ano",
+          slug: "kalel-1-ano",
           titulo: "Invitation — Kalel turns 1",
           desc: "Children's themed invitation inspired by 'The Little Prince', with a soft blue and gold palette to celebrate a first birthday.",
           data: "June 2026",
@@ -506,7 +506,7 @@ export const translations = {
           downloadLink: "",
         },
         {
-          slug: "aniversario-inauguracao",
+          slug: "aninversario-inauguracao",
           titulo: "Invitation — Birthday & Grand Opening",
           desc: "Country/rustic themed invitation, combining collage cutouts, boots, cacti, and a pickup truck to celebrate a birthday and the opening of a countryside property.",
           data: "September 2026",
@@ -656,7 +656,7 @@ export const translations = {
       viewMore: "Ver más",
       items: [
         {
-          slug: "projeto-dev-1",
+          slug: "PREVER",
           titulo: "PREVER - Sistema de Monitoreo de Desastres",
           desc: "Plataforma bidireccional que centraliza datos del INMET y CEMADEN con reportes de la comunidad vía crowdsourcing, reduciendo fallas en el envío de alertas y optimizando la respuesta de los organismos de seguridad y salud.",
           data: "Febrero de 2026",
@@ -708,13 +708,13 @@ export const translations = {
       items: [
         {
           slug: "primeira-eucaristia",
-          titulo: "Invitación — Primera Comunión",
-          desc: "Invitación elegante y minimalista para celebración religiosa, con íconos dorados de cáliz, pan y paloma sobre fondo blanco con detalles de confeti.",
-          data: "Abril de 2026",
+          titulo: "Invitación Digital — Primera Comunión",
+          desc: "Invitación limpia y elegante para una celebración religiosa, con tipografía refinada y elementos dorados.",
+          data: "Abril de 2024",
           tipo: "Invitación Digital",
           cliente: "Cliente particular",
-          formato: "Invitación digital (WhatsApp/Instagram)",
-          ferramentas: ["Canva"],
+          formato: "Instagram Stories (1080x1920)",
+          ferramentas: ["Canva", "Photoshop"],
           paleta: ["#FFFFFF", "#ffdf5f", "#B38E36", "#4A4349"],
           demoLink: "",
           downloadLink: "",
