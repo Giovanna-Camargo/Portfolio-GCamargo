@@ -210,7 +210,7 @@ export const translations = {
           tipo: "Convite Digital",
           cliente: "Cliente particular",
           formato: "Instagram Stories (1080x1920)",
-          ferramentas:w ["Canva", "Photoshop"],
+          ferramentas: ["Canva", "Photoshop"],
           paleta: ["#4A2E1C", "#8C5A32", "#C83E28", "#EBA023", "#00829B", "#FAF6DF"],
           demoLink: "",
           downloadLink: "",
