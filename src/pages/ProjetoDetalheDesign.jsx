@@ -43,9 +43,9 @@ export default function ProjetoDetalheDesign({ slug }) {
         <div className="relative rounded-2xl border border-white/12 bg-surface overflow-hidden mb-8">
           <div className="absolute -inset-6 bg-brand-cta opacity-10 blur-3xl pointer-events-none" />
           <img
-            src={imagem}
-            alt={projeto.titulo}
-            className="relative w-full h-56 sm:h-80 object-cover"
+            src={projetosImagens.design[item.slug] || designImg}
+            alt={item.titulo}
+            className="w-full h-36 object-cover group-hover:scale-[1.05] transition-transform duration-500"
           />
           {projeto.tipo && (
             <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur px-3.5 py-1.5 text-xs font-semibold text-white border border-white/20">
