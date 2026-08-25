@@ -1,10 +1,17 @@
-import devImg from "../assets/project-dev.jpg";
+import { projetosImagens } from "../data/projetosImagens";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
 
-export default function ProjetosDev() {
+export default function ProjetosDev({ categoria, slug }) {
   const { t } = useLanguage();
   const p = t.projetosDevPage;
+
+  const pageData =
+    categoria === "dev" ? t.projetosDevPage : t.projetosDesignPage;
+  const listVoltar = categoria === "dev" ? "#/projetos/dev" : "#/projetos/design";
+
+  const projeto = pageData.items.find((item) => item.slug === slug);
+  const imagem = projetosImagens[categoria]?.[slug];
 
   return (
     <section className="px-6 pt-40 pb-24">
@@ -31,7 +38,7 @@ export default function ProjetosDev() {
             >
               <div className="relative overflow-hidden">
                 <img
-                  src={item.imagem || devImg}
+                  src={item.imagem || imagem}
                   alt={item.titulo}
                   className="w-full h-36 object-cover group-hover:scale-[1.05] transition-transform duration-500"
                 />
