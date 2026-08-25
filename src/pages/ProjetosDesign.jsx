@@ -1,6 +1,7 @@
 import designImg from "../assets/project-design.jpg";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
+import { projetosImagens } from "../data/projetosImagens";
 
 export default function ProjetosDesign() {
   const { t } = useLanguage();
@@ -27,6 +28,7 @@ export default function ProjetosDesign() {
           {p.items.map((item) => {
             const paleta = item.paleta || [];
             const ferramentas = item.ferramentas || [];
+            const imagem = projetosImagens.design?.[item.slug] || designImg;
 
             return (
               <a
@@ -34,13 +36,26 @@ export default function ProjetosDesign() {
                 href={`#/projetos/design/${item.slug}`}
                 className="group flex flex-col rounded-xl border border-white/12 bg-surface overflow-hidden hover:border-magenta/50 transition-colors"
               >
-                {/* capa com badge do tipo, igual ao detalhe */}
-                <div className="relative overflow-hidden">
-                  <img
-                    src={item.imagem || designImg}
-                    alt={item.titulo}
-                    className="w-full h-36 object-cover group-hover:scale-[1.05] transition-transform duration-500"
+                {/* capa com fundo desfocado + convite inteiro visível */}
+                <div className="relative h-44 overflow-hidden">
+                  <div
+                    className="absolute inset-0 scale-110 blur-xl opacity-40"
+                    style={{
+                      backgroundImage: `url(${imagem})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
+
+                  <div className="relative flex items-center justify-center h-full py-3">
+                    <img
+                      src={imagem}
+                      alt={item.titulo}
+                      className="max-h-full max-w-[85%] object-contain rounded shadow-lg group-hover:scale-[1.05] transition-transform duration-500"
+                    />
+                  </div>
+
                   {item.tipo && (
                     <span className="absolute top-2.5 left-2.5 rounded-full bg-black/60 backdrop-blur px-2.5 py-1 text-[10px] font-semibold text-white border border-white/20">
                       {item.tipo}

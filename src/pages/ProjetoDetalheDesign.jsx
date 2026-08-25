@@ -41,12 +41,25 @@ export default function ProjetoDetalheDesign({ slug }) {
 
         {/* showcase da imagem em destaque, estilo "capa" */}
         <div className="relative rounded-2xl border border-white/12 bg-surface overflow-hidden mb-8">
-          <div className="absolute -inset-6 bg-brand-cta opacity-10 blur-3xl pointer-events-none" />
-          <img
-            src={projetosImagens.design[projeto.slug] || designImg}
-            alt={projeto.titulo}
-            className="w-full h-36 object-cover group-hover:scale-[1.05] transition-transform duration-500"
+          {/* fundo desfocado com a própria imagem, preenche as bordas sem cortar o convite */}
+          <div
+            className="absolute inset-0 scale-110 blur-2xl opacity-40"
+            style={{
+              backgroundImage: `url(${imagem})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/70" />
+
+          <div className="relative flex items-center justify-center py-8 px-6">
+            <img
+              src={imagem}
+              alt={projeto.titulo}
+              className="max-h-[420px] w-auto rounded-lg shadow-2xl object-contain"
+            />
+          </div>
+
           {projeto.tipo && (
             <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur px-3.5 py-1.5 text-xs font-semibold text-white border border-white/20">
               {projeto.tipo}
