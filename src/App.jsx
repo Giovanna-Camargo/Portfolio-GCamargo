@@ -13,13 +13,16 @@ import ProjetoDetalheDesign from "./pages/ProjetoDetalheDesign";
 
 function parseRoute() {
   const hash = window.location.hash;
-  const devDetail = hash.match(/^#\/projetos\/dev\/(.+)$/);
-  const designDetail = hash.match(/^#\/projetos\/design\/(.+)$/);
 
-  if (devDetail) return { page: "detalhe", categoria: "dev", slug: devDetail[1] };
-  if (designDetail) return { page: "detalhe", categoria: "design", slug: designDetail[1] };
+  const devDetail = hash.match(/^#\/projetos\/dev\/(.+)$/);
+  if (devDetail) return { page: "detalhe-dev", slug: devDetail[1] };
+
+  const designDetail = hash.match(/^#\/projetos\/design\/(.+)$/);
+  if (designDetail) return { page: "detalhe-design", slug: designDetail[1] };
+
   if (hash.startsWith("#/projetos/dev")) return { page: "dev" };
   if (hash.startsWith("#/projetos/design")) return { page: "design" };
+
   return { page: "home" };
 }
 
