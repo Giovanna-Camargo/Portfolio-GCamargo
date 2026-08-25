@@ -41,7 +41,6 @@ export default function ProjetoDetalheDesign({ slug }) {
 
         {/* showcase da imagem em destaque, estilo "capa" */}
         <div className="relative rounded-2xl border border-white/12 bg-surface overflow-hidden mb-8">
-          {/* fundo desfocado com a própria imagem, preenche as bordas sem cortar o convite */}
           <div
             className="absolute inset-0 scale-110 blur-2xl opacity-40"
             style={{

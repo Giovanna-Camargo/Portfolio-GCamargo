@@ -5,22 +5,23 @@ import { projetosImagens } from "../data/projetosImagens";
 
 export default function ProjetoDetalhe({ categoria, slug }) {
   const { t } = useLanguage();
-  const pageData = t.projetosDesignPage;
-  const d = t.projetoDetalheDesign;
+  const pageData =
+    categoria === "dev" ? t.projetosDevPage : t.projetosDesignPage;
+  const listVoltar = categoria === "dev" ? "#/projetos/dev" : "#/projetos/design";
 
   const projeto = pageData.items.find((item) => item.slug === slug);
-  const imagem = projetosImagens.dev?.[slug];
+  const imagem = projetosImagens[categoria]?.[slug];
 
   if (!projeto) {
     return (
       <section className="px-6 pt-32 pb-16">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-white/60 mb-6">{d.notFound}</p>
+          <p className="text-white/60 mb-6">{t.projetoDetalhe.notFound}</p>
           <a
             href={listVoltar}
             className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
           >
-            <FiArrowLeft size={16} /> {d.back}
+            <FiArrowLeft size={16} /> {t.projetoDetalhe.back}
           </a>
         </div>
       </section>
@@ -37,7 +38,7 @@ export default function ProjetoDetalhe({ categoria, slug }) {
           href={listVoltar}
           className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-8"
         >
-          <FiArrowLeft size={16} /> {d.back}
+          <FiArrowLeft size={16} /> {t.projetoDetalhe.back}
         </a>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
@@ -62,7 +63,7 @@ export default function ProjetoDetalhe({ categoria, slug }) {
                     {tecnologias.length}
                   </p>
                   <p className="text-white/50 text-xs mt-1">
-                    {d.tecCount}
+                    {t.projetoDetalhe.tecCount}
                   </p>
                 </div>
               </div>
@@ -76,7 +77,7 @@ export default function ProjetoDetalhe({ categoria, slug }) {
                     {caracteristicas.length}
                   </p>
                   <p className="text-white/50 text-xs mt-1">
-                    {d.caracCount}
+                    {t.projetoDetalhe.caracCount}
                   </p>
                 </div>
               </div>
@@ -90,11 +91,11 @@ export default function ProjetoDetalhe({ categoria, slug }) {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-3.5 py-2 text-sm text-white hover:border-magenta hover:text-magenta transition-colors"
                 >
-                  <RiGlobalLine size={13} /> {d.repo}
+                  <RiGlobalLine size={13} /> {t.projetoDetalhe.repo}
                 </a>
               ) : (
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3.5 py-2 text-sm text-white/30 cursor-not-allowed">
-                  <RiGlobalLine size={13} /> {d.noLink}
+                  <RiGlobalLine size={13} /> {t.projetoDetalhe.noLink}
                 </span>
               )}
 
@@ -105,11 +106,11 @@ export default function ProjetoDetalhe({ categoria, slug }) {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-3.5 py-2 text-sm text-white hover:border-magenta hover:text-magenta transition-colors"
                 >
-                  <FiExternalLink size={13} /> {d.demo}
+                  <FiExternalLink size={13} /> {t.projetoDetalhe.demo}
                 </a>
               ) : (
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3.5 py-2 text-sm text-white/30 cursor-not-allowed">
-                  <FiExternalLink size={13} /> {d.noLink}
+                  <FiExternalLink size={13} /> {t.projetoDetalhe.noLink}
                 </span>
               )}
             </div>
@@ -118,7 +119,7 @@ export default function ProjetoDetalhe({ categoria, slug }) {
               <div>
                 <h3 className="flex items-center gap-2 font-display font-semibold text-white mb-2.5">
                   <FiCode size={14} className="text-magenta" />
-                  {d.tecTitle}
+                  {t.projetoDetalhe.tecTitle}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {tecnologias.map((tec) => (
@@ -148,7 +149,7 @@ export default function ProjetoDetalhe({ categoria, slug }) {
               <div className="rounded-2xl border border-white/12 bg-surface p-4">
                 <h3 className="flex items-center gap-2 font-display font-semibold text-white mb-3">
                   <FiLayers size={14} className="text-magenta" />
-                  {d.caracTitle}
+                  {t.projetoDetalhe.caracTitle}
                 </h3>
                 <ul className="space-y-3">
                   {caracteristicas.map((c) => (
