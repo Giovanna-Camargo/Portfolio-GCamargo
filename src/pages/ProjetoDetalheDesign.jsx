@@ -43,8 +43,8 @@ export default function ProjetoDetalheDesign({ slug }) {
         <div className="relative rounded-2xl border border-white/12 bg-surface overflow-hidden mb-8">
           <div className="absolute -inset-6 bg-brand-cta opacity-10 blur-3xl pointer-events-none" />
           <img
-            src={projetosImagens.design[item.slug] || designImg}
-            alt={item.titulo}
+            src={projetosImagens.design[projeto.slug] || designImg}
+            alt={projeto.titulo}
             className="w-full h-36 object-cover group-hover:scale-[1.05] transition-transform duration-500"
           />
           {projeto.tipo && (
