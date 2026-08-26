@@ -25,6 +25,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="/curriculo-giovanna-camargo.pdf"
+              download="/curriculo-giovanna-camargo.pdf"
               className="rounded-full bg-brand-cta px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             >
               {c.downloadCv}
