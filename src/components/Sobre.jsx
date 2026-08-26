@@ -1,3 +1,4 @@
+import { FiBookOpen } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Sobre() {
@@ -24,20 +25,35 @@ export default function Sobre() {
           <p className="eyebrow text-xs text-magenta mb-6">
             {c.formacaoEyebrow}
           </p>
-          <ol className="relative border-l border-white/15 pl-6 space-y-10">
+
+          <div className="space-y-4">
             {c.formacao.map((f) => (
-              <li key={f.curso} className="relative">
-                <span className="absolute -left-[1.65rem] top-1 h-3 w-3 rounded-full bg-brand-cta" />
-                <p className="font-mono text-xs text-muted mb-1">
-                  {f.periodo}
-                </p>
-                <h3 className="font-display font-semibold text-lg text-white">
-                  {f.curso}
-                </h3>
-                <p className="text-white/60 text-sm mt-1">{f.instituicao}</p>
-              </li>
+              <div
+                key={f.curso}
+                className="group relative rounded-2xl border border-white/12 bg-surface p-5 hover:border-magenta/50 transition-colors overflow-hidden"
+              >
+                <span className="absolute top-0 left-0 h-full w-[3px] bg-brand-cta" />
+
+                <div className="flex items-start gap-4">
+                  <span className="shrink-0 rounded-xl bg-white/5 p-2.5 text-magenta group-hover:bg-brand-cta group-hover:text-white transition-colors">
+                    <FiBookOpen size={18} />
+                  </span>
+
+                  <div className="min-w-0">
+                    <p className="font-mono text-[11px] text-muted mb-1 tracking-wide">
+                      {f.periodo}
+                    </p>
+                    <h3 className="font-display font-semibold text-base sm:text-lg text-white leading-snug">
+                      {f.curso}
+                    </h3>
+                    <p className="text-white/55 text-sm mt-1">
+                      {f.instituicao}
+                    </p>
+                  </div>
+                </div>
+              </div>
             ))}
-          </ol>
+          </div>
         </div>
       </div>
     </section>
