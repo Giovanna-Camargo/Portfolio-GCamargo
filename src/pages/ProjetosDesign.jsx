@@ -1,11 +1,23 @@
+import { useMemo, useState } from "react";
 import designImg from "../assets/project-design.jpg";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
 import { projetosImagens } from "../data/projetosImagens";
 
+const CATEGORY_ORDER = ["all", "Convite Digital", "Apresentação", "UI/UX Design"];
+
 export default function ProjetosDesign() {
   const { t } = useLanguage();
   const p = t.projetosDesignPage;
+
+  const [ativo, setAtivo] = useState("all");
+  const filtrados = useMemo(
+    () =>
+      ativo === "all"
+        ? p.items
+        : p.items.filter((item) => item.tipo === ativo),
+    [ativo, p.items]
+  );
 
   return (
     <section className="px-6 pt-28 pb-16">
@@ -24,8 +36,25 @@ export default function ProjetosDesign() {
         <span className="block h-[3px] w-16 rounded-full bg-brand-cta mb-4" />
         <p className="text-white/60 max-w-xl mb-10">{p.subtitle}</p>
 
+        {/* filtro por categoria */}
+        <div className="flex flex-wrap gap-3 mb-10">
+          {CATEGORY_ORDER.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setAtivo(cat)}
+              className={`rounded-full px-4 py-2 text-sm border transition-colors ${
+                ativo === cat
+                  ? "bg-brand-cta text-white border-transparent"
+                  : "border-white/15 text-white/70 hover:border-white/40"
+              }`}
+            >
+              {cat === "all" ? "Todos" : cat}
+            </button>
+          ))}
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {p.items.map((item) => {
+          {filtrados.map((item) => {
             const paleta = item.paleta || [];
             const ferramentas = item.ferramentas || [];
             const imagem = projetosImagens.design?.[item.slug] || designImg;
@@ -115,6 +144,12 @@ export default function ProjetosDesign() {
             );
           })}
         </div>
+        {filtrados.length === 0 && (
+            <p className="text-white/40 text-sm text-center py-12">
+              Nenhum projeto encontrado nessa categoria.
+            </p>
+          )
+        }
       </div>
     </section>
   );
