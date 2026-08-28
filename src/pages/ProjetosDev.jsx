@@ -1,17 +1,11 @@
 import { projetosImagens } from "../data/projetosImagens";
+import undefinedIMG from "../assets/undefined.png";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
 
-export default function ProjetosDev({ categoria, slug }) {
+export default function ProjetosDev() {
   const { t } = useLanguage();
   const p = t.projetosDevPage;
-
-  const pageData =
-    categoria === "dev" ? t.projetosDevPage : t.projetosDesignPage;
-  const listVoltar = categoria === "dev" ? "#/projetos/dev" : "#/projetos/design";
-
-  const projeto = pageData.items.find((item) => item.slug === slug);
-  const imagem = projetosImagens[categoria]?.[slug];
 
   return (
     <section className="px-6 pt-40 pb-24">
@@ -31,7 +25,10 @@ export default function ProjetosDev({ categoria, slug }) {
         <p className="text-white/60 max-w-xl mb-12">{p.subtitle}</p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {p.items.map((item) => (
+          {p.items.map((item) => {
+            const imagem = projetosImagens.dev?.[item.slug] || undefinedIMG;
+
+            return (
             <article
               key={item.slug}
               className="group flex flex-col rounded-xl border border-white/12 bg-surface overflow-hidden hover:border-magenta/50 transition-colors"
@@ -72,7 +69,8 @@ export default function ProjetosDev({ categoria, slug }) {
                 </div>
               </div>
             </article>
-          ))}
+      );
+    })}
         </div>
       </div>
     </section>
