@@ -15,7 +15,7 @@ export default function ProjetosDesign() {
     () =>
       ativo === "all"
         ? p.items
-        : p.items.filter((item) => item.tipo === ativo),
+        : p.items.filter((item) => item.categoria === ativo),
     [ativo, p.items]
   );
 
