@@ -4,7 +4,7 @@ import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
 import { projetosImagens } from "../data/projetosImagens";
 
-const CATEGORY_ORDER = ["all", "Convite Digital", "Apresentação", "UI/UX Design"];
+const CATEGORY_ORDER = ["all", "convite", "apresentacao", "uiux"];
 
 export default function ProjetosDesign() {
   const { t } = useLanguage();
@@ -48,7 +48,7 @@ export default function ProjetosDesign() {
                   : "border-white/15 text-white/70 hover:border-white/40"
               }`}
             >
-              {cat === "all" ? "Todos" : cat}
+              {p.categories[cat]}
             </button>
           ))}
         </div>
