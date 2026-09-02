@@ -29,7 +29,7 @@ export default function Footer() {
             <FiMail size={16} />{c.sendEmail}
           </a>
           <a
-            href="https://github.com/gih-camarg0"
+            href="https://github.com/Giovanna-Camargo"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
