@@ -48,7 +48,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="https://github.com/gih-camarg0"
+            href="https://github.com/Giovanna-Camargo"
             target="_blank"
             rel="noreferrer"
             aria-label={t.nav.github}
