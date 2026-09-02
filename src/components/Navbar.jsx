@@ -100,7 +100,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between border-t border-white/10 pt-4">
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/gih-camarg0"
+                href="https://github.com/Giovanna-Camargo"
                 target="_blank"
                 rel="noreferrer"
                 aria-label={t.nav.github}
